@@ -1,0 +1,18 @@
+{
+  "name": "matrix-3",
+  "version": "0.1.0",
+  "description": "Declarative mathematics with type-safety",
+  "main": "src/matrix.ts",
+  "author": "Jacob Alford",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/matrix.ts",
+    "prod": "tsc && node ./build/app.js"
+  }
+}

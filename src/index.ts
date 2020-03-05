@@ -1,3 +1,3 @@
-import transpose from "./functions/transpose";
+import { transpose } from "./functions";
 
 export { transpose };

@@ -1,5 +1,5 @@
 import { M } from "./types";
-import { transpose } from "./functions";
+import { transpose, fr } from "./functions";
 
 const a = M([
   [1, 2, 3],
@@ -7,5 +7,6 @@ const a = M([
   [7, 8, 9]
 ]);
 
-console.log(a);
-console.log(transpose(a));
+const at = transpose(a);
+
+console.log(fr(at)(1)(2));

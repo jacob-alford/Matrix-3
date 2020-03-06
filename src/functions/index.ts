@@ -1,4 +1,4 @@
-import transpose from "./transpose/transpose";
 import fr from "./fr/fr";
+import chain from "./chain/chain";
 
-export { transpose, fr };
+export { chain };

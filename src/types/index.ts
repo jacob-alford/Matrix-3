@@ -1,5 +1,5 @@
-import { mat, vec } from "./data-structures";
+import { mat, vec, memoCache } from "./data-structures";
 import M from "./M";
 import V from "./V";
 
-export { mat, vec, M, V };
+export { mat, vec, M, V, memoCache };

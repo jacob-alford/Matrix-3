@@ -6,6 +6,7 @@ import fillEmpty from "./fillEmpty/fillEmpty";
 import forEachIn from "./forEachIn/forEachIn";
 import shape from "./shape/shape";
 import validateSameShape from "./validateSameShape/validateSameShape";
+import memoize from "./memoize/memoize";
 
 export {
   isSquare,
@@ -15,5 +16,6 @@ export {
   fillEmpty,
   forEachIn,
   shape,
-  validateSameShape
+  validateSameShape,
+  memoize
 };

@@ -1,12 +1,34 @@
 import { M } from "./types";
 import { transpose, fr } from "./functions";
+import { add } from "./arithmetic";
 
 const a = M([
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
+  Array(50000)
+    .fill(0)
+    .map(() => (Math.random() * 100) | 0),
+  Array(50000)
+    .fill(0)
+    .map(() => (Math.random() * 100) | 0),
+  Array(50000)
+    .fill(0)
+    .map(() => (Math.random() * 100) | 0)
 ]);
 
-const at = transpose(a);
+const c = M([
+  [1, 2, 3],
+  [1, 2, 3]
+]);
 
-console.log(fr(at)(1)(2));
+const d = M([
+  [1, 2, 3],
+  [1, 2, 3]
+]);
+
+const longFunc = async () => {
+  return await add(
+    a,
+    await add(a, await add(a, await add(a, await add(a, await add(a, a)))))
+  );
+};
+longFunc().then(console.log);
+add(c, d).then(console.log);

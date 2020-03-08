@@ -15,7 +15,7 @@ const matMul = async (mat1: mat, mat2: mat): Promise<mat> => {
         throw new Error(
           "Cannot perform matrix multiplication on matricies with differing inner dimensions!"
         );
-      const mat2T = transpose(mat2);
+      const mat2T = await transpose(mat2);
       const outMat: mat = [];
       for (const m1Row of mat1) {
         const outMatRow = [];

@@ -1,26 +1,13 @@
 import { M } from "./types";
-import { add } from "./arithmetic";
+import { matMul } from "./linear-algebra";
 
 const a = M([
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
+  [11, 3],
+  [7, 11]
 ]);
 const b = M([
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
+  [8, 0, 1],
+  [0, 3, 5]
 ]);
 
-const c = M([
-  [1, 2, 3],
-  [1, 2, 3]
-]);
-
-const d = M([
-  [1, 2, 3],
-  [1, 2, 3]
-]);
-
-add(a, b).then(console.log);
-add(c, d).then(console.log);
+matMul(a, b).then(console.log);

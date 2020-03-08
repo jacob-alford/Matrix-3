@@ -7,6 +7,7 @@ import forEachIn from "./forEachIn/forEachIn";
 import shape from "./shape/shape";
 import validateSameShape from "./validateSameShape/validateSameShape";
 import memoize from "./memoize/memoize";
+import makeElementwiseOp from "./makeElementwiseOp/makeElementwiseOp";
 
 export {
   isSquare,
@@ -17,5 +18,6 @@ export {
   forEachIn,
   shape,
   validateSameShape,
-  memoize
+  memoize,
+  makeElementwiseOp
 };

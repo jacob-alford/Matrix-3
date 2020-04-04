@@ -10,6 +10,7 @@ import shape from "./shape/shape";
 import validateSameShape from "./validateSameShape/validateSameShape";
 import memoize from "./memoize/memoize";
 import makeElementwiseOp from "./makeElementwiseOp/makeElementwiseOp";
+import slice from "./slice/slice";
 
 export {
   isSquare,
@@ -24,4 +25,5 @@ export {
   validateSameShape,
   memoize,
   makeElementwiseOp,
+  slice,
 };

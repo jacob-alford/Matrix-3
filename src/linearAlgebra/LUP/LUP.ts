@@ -1,7 +1,7 @@
 import { mat, vec, memoCache } from "types";
 import validateLUP from "./validate";
 import maxInColumn from "statistics/maxInColumn/maxInColumn";
-import { forEachFrom, memoize } from "utils";
+import { forEachFrom, memoize, slice } from "utils";
 import { swap, identity, extractLower, extractUpper } from "linearAlgebraUtils";
 
 const LUP = (A: mat): Promise<[mat, mat, mat]> => {
@@ -17,7 +17,7 @@ const LUP = (A: mat): Promise<[mat, mat, mat]> => {
     const P = identity(n);
     /* n operations */
     forEachFrom(a, 0, n - 1, (_, k) => {
-      const [maxIndex, maxValue] = maxInColumn(A, k, Math.abs);
+      const [maxIndex, maxValue] = maxInColumn(slice(a, k), k, Math.abs);
       if (maxValue === 0) reject(new Error("Provided matrix is singular!"));
       swap(a, k, maxIndex);
       swap(P, k, maxIndex);

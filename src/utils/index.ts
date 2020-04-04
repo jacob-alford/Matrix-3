@@ -4,6 +4,8 @@ import isVec from "./isVec/isVec";
 import isMat from "./isMat/isMat";
 import fillEmpty from "./fillEmpty/fillEmpty";
 import forEachIn from "./forEachIn/forEachIn";
+import forEachFrom from "./forEachFrom/forEachFrom";
+import reduceFrom from "./reduceFrom/reduceFrom";
 import shape from "./shape/shape";
 import validateSameShape from "./validateSameShape/validateSameShape";
 import memoize from "./memoize/memoize";
@@ -16,8 +18,10 @@ export {
   isVec,
   fillEmpty,
   forEachIn,
+  forEachFrom,
+  reduceFrom,
   shape,
   validateSameShape,
   memoize,
-  makeElementwiseOp
+  makeElementwiseOp,
 };

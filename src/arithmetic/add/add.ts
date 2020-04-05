@@ -1,5 +1,5 @@
-import { makeElementwiseOp } from "../../utils";
+import { makeElementwiseOp } from '../../utils';
 
 const add = (a: number, b: number): number => a + b;
 
-export default makeElementwiseOp(add, "Add");
+export default makeElementwiseOp(add, 'Add');

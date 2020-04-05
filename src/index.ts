@@ -1,3 +1,3 @@
-import { transpose } from "./functions";
+import { transpose } from './functions';
 
 export { transpose };

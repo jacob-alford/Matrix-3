@@ -14,18 +14,18 @@ import slice from './slice/slice';
 import copy from './copy/copy';
 
 export {
-	isSquare,
-	checkValidity,
-	isMat,
-	isVec,
-	fillEmpty,
-	forEachIn,
-	forEachFrom,
-	reduceFrom,
-	shape,
-	validateSameShape,
-	memoize,
-	makeElementwiseOp,
-	slice,
-	copy
+  isSquare,
+  checkValidity,
+  isMat,
+  isVec,
+  fillEmpty,
+  forEachIn,
+  forEachFrom,
+  reduceFrom,
+  shape,
+  validateSameShape,
+  memoize,
+  makeElementwiseOp,
+  slice,
+  copy
 };

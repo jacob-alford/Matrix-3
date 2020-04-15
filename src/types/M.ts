@@ -9,14 +9,14 @@ interface matConstructorOptions {
 }
 
 export const M = (item: mat | vec | string, options?: matConstructorOptions): mat => {
-  const { newRowDelimiter = ';', newColDelimiter = ' ', shape } = options || {};
+  const { newRowDelimiter = ';', newColDelimiter = ',', shape } = options || {};
   const matrix = ((A: mat | vec | string): mat => {
     if (typeof A === 'string')
       return A.split(newRowDelimiter).map(row =>
         row.split(newColDelimiter).map(item => {
           const num = +item;
           if (!isNaN(num)) return num;
-          throw new Error(`Item '${item}' is not a number!`);
+          throw new Error(`Item '${item.trim()}' is not a number!`);
         })
       );
     if (isVec(A)) {

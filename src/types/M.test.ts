@@ -2,7 +2,7 @@ import { M } from './M';
 
 describe('M() functions properly', () => {
   it('parses a matrix string without parameters', () => {
-    expect(M(`1 2 3;4 5 6;7 8 9`)).toStrictEqual([
+    expect(M(`1, 2, 3; 4, 5, 6; 7, 8, 9`)).toStrictEqual([
       [1, 2, 3],
       [4, 5, 6],
       [7, 8, 9]
@@ -10,7 +10,7 @@ describe('M() functions properly', () => {
   });
   it('parses a matrix with special parameters', () => {
     expect(
-      M('1,2,3\n4,5,6\n7,8,9', { newRowDelimiter: '\n', newColDelimiter: ',' })
+      M('1, 2, 3\n 4, 5, 6\n7, 8, 9', { newRowDelimiter: '\n', newColDelimiter: ',' })
     ).toStrictEqual([
       [1, 2, 3],
       [4, 5, 6],
@@ -18,7 +18,7 @@ describe('M() functions properly', () => {
     ]);
   });
   it('throws if invalid characters are supplied', () => {
-    expect(() => M('1 2 3;a b c;7 8 9')).toThrow(`Item 'a' is not a number!`);
+    expect(() => M('1, 2, 3; a, b, c; 7, 8, 9')).toThrow(`Item 'a' is not a number!`);
   });
   it('parses and validates a regular matrix', () => {
     expect(

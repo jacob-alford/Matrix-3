@@ -9,17 +9,16 @@ interface matConstructorOptions {
 }
 
 export const M = (item: mat | vec | string, options?: matConstructorOptions): mat => {
-  const { newRowDelimiter = '\n', newColDelimiter = ' ', shape } = options || {};
+  const { newRowDelimiter = ';', newColDelimiter = ' ', shape } = options || {};
   const matrix = ((A: mat | vec | string): mat => {
     if (typeof A === 'string')
       return A.split(newRowDelimiter).map(row =>
-        row.split(newColDelimiter).map((item, index) => {
+        row.split(newColDelimiter).map(item => {
           const num = +item;
           if (!isNaN(num)) return num;
-          throw new Error(`Item ${item} at index ${index} is not a number!`);
+          throw new Error(`Item '${item}' is not a number!`);
         })
       );
-    if (isMat(A)) return A;
     if (isVec(A)) {
       if (!shape)
         throw new Error(`options.shape is required to construct a matrix from a vector!`);
